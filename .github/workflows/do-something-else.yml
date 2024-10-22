@@ -1,0 +1,15 @@
+name: Do Something Else
+
+on:
+   release:
+      types: [published]
+
+jobs:
+   do-something-else:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Checkout repository
+           uses: actions/checkout@v4
+
+         - name: Print .gitignore
+           run: cat .gitignore
